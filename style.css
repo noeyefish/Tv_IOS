@@ -1,0 +1,71 @@
+body { /* עיצוב כללי של גוף הדף */
+  margin: 0; /* הסרת שוליים ברירת מחדל */
+  background: #1c1c1d; /* צבע רקע כהה */
+  color: white; /* צבע טקסט לבן */
+  font-family: Arial, sans-serif; /* גופן ברירת מחדל */
+}
+
+h2 { /* עיצוב כותרת רמה 2 */
+  margin: 20px 0; /* רווח מעל ומתחת */
+  color: #00aaff; /* צבע טורקיז */
+  text-align: center; /* יישור למרכז */
+}
+
+#channelList { /* עיצוב רשימת הערוצים */
+  display: grid; /* תצוגת גריד */
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* עמודות דינמיות */
+  gap: 15px; /* רווח בין פריטים */
+  padding: 15px; /* ריפוד פנימי */
+  justify-items: center; /* יישור פריטים למרכז */
+}
+
+.channel { /* עיצוב כל ערוץ */
+  cursor: pointer; /* סמן עכבר בצורת אצבע */
+}
+
+.channel .card { /* עיצוב כרטיס ערוץ */
+  background: #2a2a2c; /* רקע כהה */
+  border-radius: 12px; /* פינות מעוגלות */
+  padding: 10px; /* ריפוד פנימי */
+  width: 110px; /* רוחב קבוע */
+  height: 150px; /* גובה קבוע */
+  display: flex; /* תצוגת פלקס */
+  flex-direction: column; /* סידור אנכי */
+  align-items: center; /* יישור אופקי למרכז */
+  justify-content: space-between; /* ריווח בין פריטים */
+  transition: transform 0.2s ease, background 0.2s ease; /* אנימציה חלקה */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* צל עדין */
+  text-align: center; /* יישור טקסט למרכז */
+}
+
+/* הרחבה קלה ב-hover */
+.channel:hover .card { /* כאשר מרחפים עם העכבר על כרטיס */
+  transform: scale(1.05); /* הגדלה קלה */
+  background: #3a3a3d; /* שינוי צבע רקע */
+}
+
+.channel img { /* עיצוב תמונת לוגו ערוץ */
+  width: 48px; /* רוחב קבוע */
+  height: 48px; /* גובה קבוע */
+  object-fit: contain; /* שמירה על פרופורציות */
+  margin-bottom: 8px; /* רווח מתחת לתמונה */
+}
+
+.channel span { /* עיצוב שם הערוץ */
+  font-size: 0.85em; /* גודל טקסט קטן */
+  line-height: 1.1; /* גובה שורה */
+  word-break: break-word; /* שבירת מילים ארוכות */
+}
+
+.fav-btn { /* עיצוב כפתור מועדפים */
+  background: none; /* ללא רקע */
+  border: none; /* ללא מסגרת */
+  color: gold; /* צבע זהב */
+  font-size: 1.2em; /* גודל טקסט גדול */
+  cursor: pointer; /* סמן עכבר בצורת אצבע */
+  margin-top: 5px; /* רווח מעל */
+}
+
+.fav-btn:hover { /* כאשר מרחפים על כפתור מועדפים */
+  filter: brightness(1.3); /* הארה קלה */
+}
